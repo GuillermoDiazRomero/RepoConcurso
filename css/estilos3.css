@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+}
+
+form{
+    margin: 0 auto;
+    width: 80%;
+    background-color: aqua;
+    padding: 1.3em;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+form label{
+    display: block;
+}
+.sectform{
+    width: 95%;
+    padding: 0.7em;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    border: 0.1em dashed gray;
+
+}
+
+.sectform label{
+ width: 7.5%;
+}
+.sectform input{
+    width: 90%;
+}
+
+.radios{
+    display: flex;
+    flex-direction: column;
+}
+.radios label{
+    width: 30%;
+}
+.radios input{
+    width: 10%;
+}
+
+form input[type="submit"], form input[type="reset"]{
+    border-radius: 20%;
+    background-color: red;
+    padding: 1.2em;
+}

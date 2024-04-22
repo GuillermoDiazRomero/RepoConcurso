@@ -1,0 +1,152 @@
+<!--
+Unidad III: Interacción y Contenido Multimedia
+Formulario accesible: elementos auto validados por HTML5, etiqueta label, atributo 
+required, etiquetas legend y fieldset, diferencia entre método get y post. CSS para 
+formulario. 
+Contenedores de audio y video y sus codecs, compatibilidad con los 
+navegadores. Subtítulos (cómo se redactan y se incorporan a un video). Inserción de 
+videos de Youtube. Lectores de Pantalla para personas con discapacidad visual.
+-->
+
+<!--
+    method = "get" indica que los datos serán enviados añadiéndose a la dirección de la página indicada en action
+    method = "post" indica que los datos serán enviados encerrados dentro de la petición HTTP de manera no visible en la dirección del navegador
+    for tiene que concidir con id, name="variable", type tipo
+    value = "valorpordefecto" por si el usuario no llegase a ingresar nada
+    type:
+        text = texto
+        date = ingresa una fecha
+        time = Ingresa un horario
+        week = Ingresa una semana inicial y una final
+        number = ingresa un numero (con step="0.1" indico cuanto se modifica al precionar las flechas)
+        range = aparece una barra con rango superior e inferior
+        email = Ingresa un mail
+        url = Ingresa una dirección url
+        color = Ingresa un color
+        tel = Ingresa un numero de telefono
+        search = Ingresa una palabra para buscar en la pagina
+        submit = envia el formulario
+        reset = borra el formulario
+
+        fieldset es como un section para formularios mientras que el section se usa para botones
+
+        tener en cuenta que para hacer un radio con 1 sola opcion tienen que tener el mismo name y añadir el atributo value, ademas el label debe contener al input para que se encuentren en la misma linea
+
+        en CSS los label tienen que ir con display:block;
+        en CSS los input se editan así form input[type="tipo"]{  }
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3</title>
+    <link rel="stylesheet" href="css/estilos3.css">
+</head>
+
+<body>
+    <header>
+        <h1>unidad 3</h1>
+    </header>
+    <main>
+
+        <form action="php/procesar.php" method="post">
+
+            <fieldset class="sectform">
+                <label for="ape">Apellido:</label>
+                <input type="text" name="apellido" id="ape" placeholder="Ejemplo: Argento" maxlength="20" minlength="2">
+            </fieldset>
+
+            <fieldset class="sectform">
+                <label for="cnt">Contraseña</label>
+                <input type="password" name="password" id="cnt">
+            </fieldset>
+
+            <fieldset class="sectform">
+                <label for="">Probando week</label>
+                <input type="week" name="" id="">
+
+            </fieldset>
+
+            <fieldset class="sectform">
+                <label for="">Probando email</label>
+                <input type="email" name="" id="">
+
+            </fieldset>
+
+            <fieldset class="sectform">
+                <label for="">Probando url</label>
+                <input type="url" name="" id="">
+
+            </fieldset>
+
+            <fieldset class="sectform">
+                <label for="">Probando numeros</label>
+                <input type="number" name="" id="" max="10" min="1">
+
+            </fieldset>
+
+            <fieldset class="sectform">
+                <label for="">Probando el range</label>
+                0<input type="range" name="rango" id="" min="0" max="20" step="0.5">20
+
+            </fieldset>
+
+            <fieldset class="sectform radios">
+                <legend>Probando radio con 1 opcion</legend>
+                <label for="LALI"><input type="radio" name="partido" id="LALI" value="Milei" checked>LLA</label>
+                <label for="k"><input type="radio" name="partido" id="k" value="Massa">Kirch</label>
+                <label for="zurdo"><input type="radio" name="partido" id="zurdo" value="Peronia">Izquierda</label>
+
+            </fieldset>
+
+            <fieldset class="sectform radios">
+                <legend>Probando checkbox con varias opciones</legend>
+                <label for="tec">
+                    <input type="checkbox" name="teclado" id="tec">Teclado
+                </label>
+                <label for="pos">
+                    <input type="checkbox" name="positivo" id="pos">Positivo
+                </label>
+                <label for="pol">
+                    <input type="checkbox" name="poliroso" id="pol">Poliroso
+                </label>
+
+            </fieldset>
+
+            <section class="sectform">
+                <label for="mizona">Elegir zona:
+                    <select name="zona" id="mizona">
+                        <option value="ninguna" selected>Ninguna</option>
+                        <option value="jujuy4k">Jujuy 4k</option>
+                        <option value="micasa">Mi casa</option>
+                    </select>
+                </label>
+            </section>
+
+            <section>
+                <input type="submit" name="" id="" value="MANDA">
+                <input type="reset" name="" id="" value="Boraa">
+            </section>
+        </form>
+
+
+        <section>
+            <video controls preload  loop poster="img/Joelfoto.JPG">
+                <source src="video/prueba.mp4" type="video/mp4">
+                <source src="video/prueba.webm" type="video/webm">
+                <source src="video/prueba.ogv" type="video/ogv">
+                <p>Su navegador no acepta videos HTML5</p>
+            </video>
+
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

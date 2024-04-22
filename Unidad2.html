@@ -1,0 +1,162 @@
+<!--
+    Unidad II: Estructuración del Contenido con HTML y CSS
+Estructura de las propiedades CSS. Unidades de medida para web (em, %, px). Color de 
+fuente, fondo y borde. Padding (espacio interno).  Margen. Mostrado (display) y 
+alineación. Clases e Id: diferencias y usos. Maquetación CSS básica. Imagen accesible, 
+tamaño y alineación. Imagen de fondo. Listas Ordenadas y Desordenadas. Menú parte 
+HTML y CSS (básico y con efecto). Tablas: usos, alcance (scope) de las celdas título, 
+recomendaciones de accesibilidad, expansión de celda (colspan, rowspan), borde y color 
+de fondo. Texto en columnas.
+
+-->
+
+<!-- 
+    HTML: HyperText Markup Language
+    CSS: Cascading Style Sheets
+    em = 16px
+    rem = depende de la medida dada al html (16 por defecto)
+    Enlace Absoluto: Cuando se pone la ubicación completa del archivo (C:\pc\...)
+    Enlace Relativo: Enlaces dentro del sitio
+    flex-warp (sirve para cuando los tamaños de los sections se salen de la pantalla, los ubica en otra linea).
+    RGB (red, green, blue)
+    Enlaces que añaden accesibilidad (Saltar a Contenido y Saltar a Navegación)
+    En un link: target = "_blank" (abre el enlace en otra pagina)
+
+    caption es para el titulo de la tabla
+
+    tr es para las filas
+    td es para las columnas
+    th es para encabezados (usar scope para indicar si es de columna o fila)
+    colspan (indico cuantas columnas ocupa una celda)
+    rowspan (indico cuantas filas ocupa una celda)
+    tr*x>td*y (creo x filas con y columnas)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guillermo Diaz Romero"> <!--Indica el autor de la pagina-->
+    <meta name="description" content="Pagina de prueba de la unidad 2">
+    <title>Unidad 2</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+</head>
+
+<body>
+    <main>
+        <table>
+            <caption>Titulo de mi Tabla</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Encabezado 1</th>
+                    <th scope="col" colspan="3">Encabezado 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Enca fila1</th>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <th scope="row">Enca fila2</th>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <th scope="row">Enca fila3</th>
+                    <td>0</td>
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Enca fila 4</th>
+                    <td colspan="3">13</td>
+                </tr>
+                <tr>
+                    <td colspan="3">14</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="4">Enca footer</th>
+                </tr>
+            </tfoot>
+        </table>
+        <table>
+            <tr>
+                <th scope="col">Foto</th>
+                <th scope="col">Donde</th>
+                <th scope="col">Info</th>
+            </tr>
+            <tr>
+                <td class="tablaimagen">
+                    <figure>
+                        <img src="img/2.JPG" alt="">
+                    </figure>
+                </td>
+                <td>blabla</td>
+                <td>bleble</td>
+            </tr>
+            <tr>
+                <td class="tablaimagen">
+                    <figure>
+                        <img src="img/Joelfoto.JPG" alt="">
+                    </figure>
+                </td>
+                <td>vblabla</td>
+                <td>vbleble</td>
+            </tr>
+        </table>
+
+        <ul>
+            <li><a href="#galeria" title="Información del link">Galeria</a></li>
+            <li><a href="Unidad1.html#unidad1" title="Información del link" target="_blank">Unidad 1</a></li>
+            <li><a href="" title="Información del link">Hola</a></li>
+            <li><a download="imagen de fondo" href="img/1.JPG" title="Información del link">Descarga la imagen de
+                    fondo</a></li>
+        </ul>
+
+        <article>
+            <p>Lorem ipsum "<strong>dolor sit</strong>" amet consectetur adipisicing elit. "<cite>Omnis, maiores
+                    possimus</cite>" aliquam corporis praesentium "<em>quaerat nostrum assumenda</em>" laboriosam
+                <mark>totam eligendi voluptatem</mark> quasi dicta id numquam porro, sapiente cumque iste labore?
+            </p>
+        </article>
+
+        <article>
+            <figure>
+                <img title="Linea zero locos" src="img/6.JPG" alt="Descripción">
+                <figcaption>Linea zero locos</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officia veniam iure minus incidunt, cum,
+                consequuntur quaerat qui amet quidem quos, eveniet vel itaque repellendus quia ullam reiciendis
+                laudantium voluptatibus.</p>
+        </article>
+
+        <section class="wrap" id="galeria">
+            <figure>
+                <img src="img/1.JPG" alt="">
+            </figure>
+
+            <figure>
+                <img src="img/6.JPG" alt="">
+            </figure>
+
+            <figure>
+                <img src="img/6.JPG" alt="">
+            </figure>
+
+            <figure>
+                <img src="img/1.JPG" alt="">
+            </figure>
+        </section>
+
+    </main>
+</body>
+
+</html>
