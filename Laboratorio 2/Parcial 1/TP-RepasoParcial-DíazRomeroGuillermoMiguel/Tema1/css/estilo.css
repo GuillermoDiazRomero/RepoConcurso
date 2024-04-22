@@ -1,0 +1,17 @@
+td img {
+    width: 20px; /* Ancho deseado para las imágenes */
+    height: 20px; /* Alto deseado para las imágenes */
+}
+
+td:hover {
+    background-color: rgba(0,200,0,0.7);
+}
+
+.table {
+    width: auto;
+}
+
+article figure img {
+    width: 100% !important;
+    height: 100% !important;
+}

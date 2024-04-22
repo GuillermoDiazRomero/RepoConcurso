@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+main {
+    background-color: greenyellow;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    width: 100%;
+}
+
